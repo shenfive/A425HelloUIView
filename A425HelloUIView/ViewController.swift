@@ -18,6 +18,7 @@ class ViewController: UIViewController {
         let newView = UIView.init(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
         
         newView.backgroundColor = UIColor.red
+        newView.center = self.view.center
         
         self.view.addSubview(newView)
         
