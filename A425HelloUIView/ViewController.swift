@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     var counter = 0.0
     var timer:Timer!
     
+    @IBOutlet weak var sigment: UISegmentedControl!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,8 +37,13 @@ class ViewController: UIViewController {
     func rotate(theView:UIView){
         let angle =  counter * Double.pi / 180
         theView.transform = CGAffineTransform(rotationAngle: CGFloat(angle))
-        counter += 1
         
+        if sigment.selectedSegmentIndex == 0{
+            
+            counter += 1
+        }else{
+            counter -= 1
+        }
         
         
     }
