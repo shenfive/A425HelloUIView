@@ -21,19 +21,22 @@ class ViewController: UIViewController {
         newView.center = self.view.center
         newView.transform = CGAffineTransform(rotationAngle: 0)
         
-        timer = Timer.scheduledTimer(withTimeInterval: 0.05, repeats: true, block: { (timer) in
+        newView.clipsToBounds = true
+        newView.layer.cornerRadius = 15
+        
+        
+        
+        timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true, block: { (timer) in
             self.rotate(theView: newView)
         })
-        
-        
         self.view.addSubview(newView)
         
     }
 
     func rotate(theView:UIView){
-        let angle =  counter * M_PI / 180
+        let angle =  counter * Double.pi / 180
         theView.transform = CGAffineTransform(rotationAngle: CGFloat(angle))
-        counter += 4
+        counter += 1
         
         
         
