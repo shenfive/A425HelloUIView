@@ -16,6 +16,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var sigment: UISegmentedControl!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(slider.value)
+        slider.value = 5
 
         let newView = UIView.init(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
         
