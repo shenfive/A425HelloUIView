@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     var counter = 0.0
     var timer:Timer!
     
+    @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var sigment: UISegmentedControl!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,10 +40,10 @@ class ViewController: UIViewController {
         theView.transform = CGAffineTransform(rotationAngle: CGFloat(angle))
         
         if sigment.selectedSegmentIndex == 0{
-            
-            counter += 1
+           
+            counter += Double(slider.value)
         }else{
-            counter -= 1
+            counter -= Double(slider.value)
         }
         
         

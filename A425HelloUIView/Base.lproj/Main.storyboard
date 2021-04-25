@@ -23,16 +23,25 @@
                                     <segment title="反轉"/>
                                 </segments>
                             </segmentedControl>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="0VH-MF-V0L">
+                                <rect key="frame" x="148" y="162" width="118" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="AUW-lB-nfl"/>
+                                </constraints>
+                            </slider>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="0VH-MF-V0L" firstAttribute="top" secondItem="ieE-lS-3Ou" secondAttribute="bottom" constant="41" id="FAd-H6-3mp"/>
                             <constraint firstItem="ieE-lS-3Ou" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lwA-6d-6KF"/>
+                            <constraint firstItem="0VH-MF-V0L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="o1L-q7-ohM"/>
                             <constraint firstItem="ieE-lS-3Ou" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="46" id="qLY-7M-z1w"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="sigment" destination="ieE-lS-3Ou" id="IZa-55-nML"/>
+                        <outlet property="slider" destination="0VH-MF-V0L" id="jKL-jg-QfL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
